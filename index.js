@@ -85,7 +85,7 @@ function createList(points){
 
     // adding event listener to fly to location and open popup
     li.addEventListener("click", () => {
-      mymap.flyTo([point.lat, point.lng], 16);
+      mymap.flyTo([point.lat, point.lng], 18);
       const currentMarker = markers.find(
         (item) => item.options.title === point.name
       );
@@ -120,7 +120,6 @@ function filterList() {
 
 function createButton(){
   let form = document.querySelector('form')
-
   let button = document.querySelector('button') || document.createElement('button')
   button.addEventListener('click', (e) => resetPage(e))
   button.classList += 'btn btn-light' 
