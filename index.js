@@ -1,5 +1,5 @@
 // creating the map
-let mymap = L.map("map", { zoomControl: false }).setView([-23, -45], 8);
+let mymap = L.map("map", { zoomControl: false }).setView([-23.53974278720173, -46.72131030304516,], 8);
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(mymap);
 
 // array to save created markers
