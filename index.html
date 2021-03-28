@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-  <link rel="stylesheet" href="index.css">
-  <title>Munddi Challenge</title>
-</head>
-<body>
-  <div class="main-page">
-    <div class="menu-container">
-      <form >
-        <input
-        type="text"
-        id="searchInput"
-        placeholder="Digite um nome..."
-        onkeyup=filterList()
-        />
-        <!-- <button class="btn btn-light" onclick="resetPage(e)">Zoom out</button> -->
-      </form>
-      <ul id='list'></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Munddi Map</title>
+  </head>
+  <body>
+    <div class="main-page">
+      <i class="fa fa-bars menu-icon" aria-hidden="true" onclick=toggleMenu()></i>
+      <div class="menu-container" id="menu-container">
+        <form>
+          <div>
+            <i class="fa fa-times close-icon" aria-hidden="true" onclick="toggleMenu()"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Digite um nome..."
+              onkeyup="filterList()"
+            />
+          </div>
+        </form>
+        <ul id="list"></ul>
+      </div>
+      <div id="map"></div>
     </div>
-    <div id="map"></div>
-  </div>
 
-  <!-- ------------------------------------------------------------------------ -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-  <script type="text/javascript" src="index.js"></script>
-</body>
+    <!-- ------------------------------------------------------------------------ -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>

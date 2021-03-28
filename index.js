@@ -133,3 +133,9 @@ function resetPage(e){
   document.location.reload()
   console.log(e)
 }
+
+// toggle menu
+function toggleMenu() {
+  const element = document.getElementById('menu-container')
+  element.toggleAttribute('hidden')
+}
