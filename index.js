@@ -124,7 +124,7 @@ function createButton(){
   let button = document.querySelector('button') || document.createElement('button')
   button.addEventListener('click', (e) => resetPage(e))
   button.classList += 'btn btn-light' 
-  button.innerText = 'Reset map'
+  button.innerText = 'Visão geral'
   form.appendChild(button)
 }
 
